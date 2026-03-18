@@ -1,0 +1,19 @@
+# 环境变量示例（上传）
+# 大模型API设置项
+DOUBAO_API_KEY=XXX  # 你自己的豆包API_KEY
+DOUBAO_LLM_API_URL=https://ark.cn-beijing.volces.com/api/v3/chat/completions
+DOUBAO_EMBEDDING_API_URL=https://ark.cn-beijing.volces.com/api/v3/embeddings
+DOUBAO_MODEL_NAME=doubao-1-5-pro-32k-250115
+DOUBAO_EMBEDDING_NAME=Doubao-embedding-large
+QWEN_API_KEY=XXX  # 你自己的QWENAPI_KEY
+QWEN_LLM_API_URL=https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+QWEN_EMBEDDING_API_URL = https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings
+QWEN_MODEL_NAME=qwen-turbo
+QWEN_EMBEDDING_NAME = text-embedding-v3
+
+# 邮箱设置项
+# 邮件配置（用于邮件自动化，可选）
+EMAIL_USER= 你的邮箱
+EMAIL_PASS= 你的邮箱授权码（不是密码）
+EMAIL_SMTP=smtp.163.com （这里使用的网易的163邮箱）
+EMAIL_PORT=465 （SSL链接默认端口）
