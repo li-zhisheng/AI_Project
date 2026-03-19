@@ -47,7 +47,7 @@ if not all(value for value in MODEL_CONFIG["email"].values()):
 def call_llm(prompt,model_name,temperature=0.5,max_tokens=1500,retry=3):
     # 请求头
     headers = {
-        "Authorization": f"Bearer {MODEL_CONFIG[model_name]["key"]}",
+        "Authorization": f"Bearer {MODEL_CONFIG[model_name]['key']}",
         "Content-Type": "application/json"
     }
     # 数据体
