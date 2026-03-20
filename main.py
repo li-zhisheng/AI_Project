@@ -20,14 +20,14 @@ def main():
         choice = input("\n请输入功能编号：")
         if choice == "1":
             run_interview_assistant()
-        if choice == "2":
+        elif choice == "2":
             run_knowledge_base()
-        if choice == "3":
+        elif choice == "3":
             run_office_robot()
         elif choice == "0":
             logger.info("退出程序")
             break
         else:
-            print("无效输入")
+            print("无效输入，请重新输入")
 if __name__ == "__main__":
     main()

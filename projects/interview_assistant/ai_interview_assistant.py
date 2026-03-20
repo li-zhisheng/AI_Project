@@ -12,7 +12,7 @@ AI项目一：AI面试助手
 import json
 from datetime import datetime
 import re
-from core.llm_client import call_llm
+from core.llm_client import MODEL_CONFIG,MODEL_TYPE,call_llm
 from core.logger import logger
 
 # 定义高质量面试题函数
@@ -38,10 +38,14 @@ def score_answer(model_name,question,user_answer,job_name):
     任务：请对候选人的回答进行专业评估并打分（1-100分）。
     题目：{question}。
     候选人回答：{user_answer}。
+    重要评分规则：
+    1.若候选人未作答、回答为空、或仅包含无意义字符（如标点、空格）。必须直接给出0-5分
+    2.若回答内容严重偏题或完全错误，分数不得超过30分
+    3.只有回答逻辑清晰、覆盖关键点，才能给予高分
     要求：请严格按照以下三部分内容输出：
     1. 分数：xx分
-    2. 优点：xxx
-    3. 不足与改进：xxx
+    2. 优点：xxx（若无则填“无”）
+    3. 不足与改进：xxx（针对空回答需明确指出“未提供有效回答”）
     语言简洁专业
     """
     return call_llm(prompt,model_name,temperature=0.4)
@@ -74,7 +78,6 @@ def save_interview_history(user_name,job_name,qas,total):
 def main():
     """AI面试助手主函数"""
     logger.info("启动AI面试助手")
-    MODEL_NAME = ["doubao","qwen"]
     SUPPORTED_JOBS = ["AI大模型应用工程师","Prompt工程师","AI数据分析工程师"]
     try:
         print("=" * 60)
@@ -86,16 +89,21 @@ def main():
             print("姓名不能为空")
             return
         # 选定可用大模型
+        print("请选择模型")
+        for i,m in enumerate(MODEL_TYPE):
+            print(f"{i+1}.{m}")
         while True:
             try:
-                model = int(input("请选择可用大模型,其余数字或字符均无效\n1：豆包[doubao]\n2：千问[qwen]\n"))
-                if 1 <= model <= len(MODEL_NAME):
-                    model_name = MODEL_NAME[model-1]
-                    break
-                else:
-                    print("请输入正确的序号")
-            except ValueError:
-                print("请输入数字")
+                choice = int(input("请输入有效序号,输入其他内容均无效：\n").strip())
+                if choice not in [1,len(MODEL_TYPE)]:
+                    print("序号不存在，请重新输入")
+                    continue
+                model_name = MODEL_TYPE[choice - 1]
+                logger.info(f"已选择模型：{model_name}")
+                break
+            except Exception:
+                logger.error("输入无效内容，请重新输入")
+                continue
         print("\n可选岗位：")
         for i ,job in enumerate(SUPPORTED_JOBS,1):
             print(f"{i}.{job}")
@@ -125,15 +133,21 @@ def main():
             else:
                 print(f"\n【第{i}题】：{q}")
                 ans = get_multiline_input()
-                score = score_answer(model_name,q,ans,job)
-                print(f"\n AI点评：\n{score}")
-                try:
-                    # 通过正则表达式获取分数
-                    small_score = re.search(r"分数[:：]\s*(\d+)",score).group(1)
-                    total += int(small_score)
-                except Exception :
-                    print("AI点评未按照要求输出，请稍后检查，继续作答")
-                qas.append({"question": q,"answer": ans,"score": score})
+                # 【核心修复逻辑】前置判断回答是否为空
+                if not ans:
+                    print("\n检测到未作答，系统将直接判定为零分")
+                    score = """1.分数：0分\n2.优点：无\n3.不足与改进：候选人未提供任何回答。建议至少尝试阐述相关思路或承认暂时不知道但给出推导过程。"""
+                    print(f"\n AI点评：\n{score}")
+                else:
+                    score = score_answer(model_name,q,ans,job)
+                    print(f"\n AI点评：\n{score}")
+                    try:
+                        # 通过正则表达式获取分数
+                        small_score = re.search(r"分数[:：]\s*(\d+)",score).group(1)
+                        total += int(small_score)
+                    except Exception :
+                        print("AI点评未按照要求输出，请稍后检查，继续作答")
+                    qas.append({"question": q,"answer": ans,"score": score})
 
         save_interview_history(name,job,qas,total)
         print("\n面试完成,记录已保存")
