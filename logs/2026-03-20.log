@@ -64,3 +64,13 @@
 2026-03-20 22:50:21,212 - ai_project - ERROR - 邮件发送失败：(554, b'DT:SPM 163 gzga-smtp-mtada-g0-4,_____wD3142tXr1pCZyiAQ--.45934S2 1774018222,please see http://u.163.com/S8nStmcXQ?ip=2409:8a50:e6e:9030:8432:d9ca:5ebb:343c&hostid=gzga-smtp-mtada-g0-4&time=1774018222')
 2026-03-20 22:55:24,919 - ai_project - INFO - 启动AI项目集合
 2026-03-20 22:55:29,204 - ai_project - INFO - 已选择模型：doubao
+2026-03-20 22:58:27,562 - ai_project - INFO - 启动AI项目集合
+2026-03-20 22:58:30,675 - ai_project - INFO - 已选择模型：doubao
+2026-03-20 22:59:33,207 - ai_project - INFO - LLM调用成功
+2026-03-20 22:59:33,228 - ai_project - INFO - Word文档已生成并保存：batch_output\文档1_如何拥有千万资产.docx
+2026-03-20 23:00:08,110 - ai_project - INFO - LLM调用成功
+2026-03-20 23:00:08,140 - ai_project - INFO - Word文档已生成并保存：batch_output\文档2_如何在30岁前拥有一个亿.docx
+2026-03-20 23:00:08,141 - ai_project - INFO - 批量处理完成，报告保存至：batch_output\批量处理报告.json
+2026-03-20 23:01:13,509 - ai_project - INFO - 启动AI面试助手
+2026-03-20 23:01:19,317 - ai_project - INFO - 已选择模型：doubao
+2026-03-20 23:01:25,813 - ai_project - INFO - LLM调用成功

@@ -30,6 +30,7 @@ MODEL_CONFIG = {
         "email_user": os.getenv("EMAIL_USER"),
         "email_pass": os.getenv("EMAIL_PASS"),
         "email_smtp": os.getenv("EMAIL_SMTP"),
+        "to_email": os.getenv("TO_EMAIL"),
         "email_port": os.getenv("EMAIL_PORT")
     }
 }

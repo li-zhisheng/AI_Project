@@ -1,0 +1,37 @@
+2026-03-22 00:17:02,799 - ai_project - INFO - 启动AI项目集合
+2026-03-22 00:17:05,139 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 00:17:07,650 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 00:17:07,651 - ai_project - ERROR - 任务执行过程中发生严重错误：Excel file format cannot be determined, you must specify an engine manually.
+2026-03-22 00:23:44,107 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 00:23:45,731 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 00:23:45,733 - ai_project - ERROR - 任务执行过程中发生严重错误：Excel file format cannot be determined, you must specify an engine manually.
+2026-03-22 00:34:10,314 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 00:34:11,626 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 00:34:11,627 - ai_project - ERROR - 任务执行过程中发生严重错误：Excel file format cannot be determined, you must specify an engine manually.
+2026-03-22 00:35:22,698 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 00:35:23,858 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 00:35:23,859 - ai_project - ERROR - 任务执行过程中发生严重错误：Excel file format cannot be determined, you must specify an engine manually.
+2026-03-22 02:07:01,902 - ai_project - INFO - 启动AI项目集合
+2026-03-22 02:07:04,209 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 02:07:06,336 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 02:07:06,351 - ai_project - INFO - 数据加载完成，共4行
+2026-03-22 02:07:06,352 - ai_project - INFO - 统计完成：{'总销售额': np.int64(67000), '平均销售额': np.float64(16750.0), '最高订单': np.int64(22000), '订单总数': 4, '城市数': 4}
+2026-03-22 02:07:08,162 - ai_project - INFO - LLM调用成功
+2026-03-22 02:07:08,184 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603220207.docx
+2026-03-22 02:07:08,184 - ai_project - ERROR - 任务执行过程中发生严重错误：'email-user'
+2026-03-22 02:10:39,344 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 02:10:41,256 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 02:10:41,272 - ai_project - INFO - 数据加载完成，共4行
+2026-03-22 02:10:41,273 - ai_project - INFO - 统计完成：{'总销售额': np.int64(67000), '平均销售额': np.float64(16750.0), '最高订单': np.int64(22000), '订单总数': 4, '城市数': 4}
+2026-03-22 02:10:43,650 - ai_project - INFO - LLM调用成功
+2026-03-22 02:10:43,673 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603220210.docx
+2026-03-22 02:10:43,673 - ai_project - ERROR - 任务执行过程中发生严重错误：'email-user'
+2026-03-22 02:13:04,488 - ai_project - INFO - 启动AI项目集合
+2026-03-22 02:13:06,648 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 02:13:08,264 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 02:13:08,280 - ai_project - INFO - 数据加载完成，共4行
+2026-03-22 02:13:08,281 - ai_project - INFO - 统计完成：{'总销售额': np.int64(67000), '平均销售额': np.float64(16750.0), '最高订单': np.int64(22000), '订单总数': 4, '城市数': 4}
+2026-03-22 02:13:10,186 - ai_project - INFO - LLM调用成功
+2026-03-22 02:13:10,208 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603220213.docx
+2026-03-22 02:13:10,781 - ai_project - INFO - 邮件发送成功
+2026-03-22 02:13:10,781 - ai_project - INFO - ===自动化报告任务全部完成===

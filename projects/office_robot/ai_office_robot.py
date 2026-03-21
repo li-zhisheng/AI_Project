@@ -1,3 +1,10 @@
+"""
+AI项目三：AI自动化办公机器人
+1.基于 Python + 大模型 API 开发企业级自动化办公工具，支持 AI 生成 Word、分析 Excel、发送个性化邮件、批量文档处理
+2.整合 python-docx/openpyxl/smtplib 等库，实现办公全流程自动化
+3.解决企业重复办公任务痛点，提升办公效率 80% 以上
+4.技术栈：Python、大模型 API、办公自动化库、批量处理、异常处理
+"""
 import os
 import requests
 import json

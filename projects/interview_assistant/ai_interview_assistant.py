@@ -8,11 +8,12 @@ AI项目一：AI面试助手
 2026-03-19 优化内容：
 1.提供长文回答机制
 2.完善异常处理，避免程序报错
-3.添加姓名和时间戳以及最终综合得分，精确记录每一位考生的成绩"""
+3.添加姓名和时间戳以及最终综合得分，精确记录每一位考生的成绩
+"""
 import json
 from datetime import datetime
 import re
-from core.llm_client import MODEL_CONFIG,MODEL_TYPE,call_llm
+from core.llm_client import MODEL_TYPE,call_llm
 from core.logger import logger
 
 # 定义高质量面试题函数
