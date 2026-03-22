@@ -6,7 +6,6 @@ AI项目三：AI自动化办公机器人
 4.技术栈：Python、大模型 API、办公自动化库、批量处理、异常处理
 """
 import os
-import requests
 import json
 from docx import Document
 from openpyxl import Workbook,load_workbook
@@ -156,8 +155,8 @@ def ai_send_email(model_name,to_email,subject):
         )
         # 构造函数
         msg = MIMEText(email_content,"plain","utf-8")
-        msg["From"] = Header(MODEL_CONFIG["email"]["email_user"],"utf-8")
-        msg["To"] = Header(to_email,"utf-8")
+        msg["From"] = MODEL_CONFIG["email"]["email_user"]
+        msg["To"] = to_email
         msg["Subject"] = Header(subject,"utf-8")
         # 发送邮件
         smtp_obj.sendmail(

@@ -1,10 +1,14 @@
 """
 AI项目四：AI自动化数据报告系统
-1.基于 Python+Pandas + 大模型 API 开发企业级自动化数据报告系统
+1.基于 Python+Pandas + 大模型 API 开发企业级自动化全流程数据报告系统
 2.实现 Excel 数据读取、清洗、统计、AI 分析、Word 报告生成、自动邮件发送全流程
 3.支持无人值守运行，大幅降低人工报表工作量（效率提升 90%）
 4.具备日志记录、异常处理能力
 5.技术栈：Python、Pandas、大模型 API、自动化办公、邮件服务、工程化部署
+2026-03-22 优化内容：
+1.采用 PM2 守护进程 + 定时任务 实现 7×24 小时无人值守运行
+2.支持崩溃自动重启、开机自启、日志持久化、异常告警
+3.真实落地场景：每日销售 / 运营 / 财务自动化报表
 """
 import os
 import pandas as pd
@@ -93,21 +97,25 @@ def send_email_with_report(report_path):
 def main():
     logger.info("===开始执行自动化报告任务===")
     try:
-        print("请选择模型")
-        for i,m in enumerate(MODEL_TYPE):
-            print(f"{i+1}.{m}")
-        while True:
-            try:
-                choice = int(input("请输入有效序号,输入其他内容均无效：\n").strip())
-                if choice not in [1,len(MODEL_TYPE)]:
-                    print("序号不存在，请重新输入")
-                    continue
-                model_name = MODEL_TYPE[choice - 1]
-                logger.info(f"已选择模型：{model_name}")
-                break
-            except Exception:
-                logger.error("输入无效内容，请重新输入")
-                continue
+        # print("请选择模型")
+        # for i,m in enumerate(MODEL_TYPE):
+        #     print(f"{i+1}.{m}")
+        # while True:
+        #     try:
+        #         choice = int(input("请输入有效序号,输入其他内容均无效：\n").strip())
+        #         if choice not in [1,len(MODEL_TYPE)]:
+        #             print("序号不存在，请重新输入")
+        #             continue
+        #         model_name = MODEL_TYPE[choice - 1]
+        #         logger.info(f"已选择模型：{model_name}")
+        #         break
+        #     except Exception:
+        #         logger.error("输入无效内容，请重新输入")
+        #         continue
+        """
+        对该项目进行优化，添加定时推送功能，对模型选择采用固定式
+        """
+
         df = load_data()
         stats = analyze_data(df)
         prompt = f"""
@@ -118,7 +126,7 @@ def main():
         2.给出业务建议
         3.语言正式，不使用markdown
         """
-        analysis = call_llm(prompt,model_name,temperature=0.3)
+        analysis = call_llm(prompt,model_name="doubao",temperature=0.3)
         output_path = f"projects/auto_report/output/报告_{datetime.now().strftime('%Y%m%d%H%M')}.docx"
         generate_word_report(stats,analysis,output_path)
         send_email_with_report(output_path)

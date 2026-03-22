@@ -35,3 +35,59 @@
 2026-03-22 02:13:10,208 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603220213.docx
 2026-03-22 02:13:10,781 - ai_project - INFO - 邮件发送成功
 2026-03-22 02:13:10,781 - ai_project - INFO - ===自动化报告任务全部完成===
+2026-03-22 02:45:04,246 - ai_project - INFO - 启动AI项目集合
+2026-03-22 02:45:10,657 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 02:45:45,072 - ai_project - ERROR - 第1次失败，API调用失败HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /compatible-mode/v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-03-22 02:45:46,099 - ai_project - ERROR - 第2次失败，API调用失败HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /compatible-mode/v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-03-22 02:45:47,112 - ai_project - ERROR - 第3次失败，API调用失败HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /compatible-mode/v1/chat/completions (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-03-22 02:45:48,122 - ai_project - ERROR - LLM连续重试后调用失败
+2026-03-22 02:45:48,122 - ai_project - ERROR - LLM调用失败
+2026-03-22 02:48:25,230 - ai_project - INFO - LLM调用成功
+2026-03-22 02:48:28,557 - ai_project - INFO - 邮件已成功发送至：2093782305@qq.com
+2026-03-22 02:54:15,633 - ai_project - INFO - 启动AI项目集合
+2026-03-22 02:54:24,344 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 02:54:59,558 - ai_project - INFO - LLM调用成功
+2026-03-22 02:54:59,747 - ai_project - ERROR - 邮件发送失败：'tuple' object has no attribute 'encode'
+2026-03-22 02:55:30,318 - ai_project - INFO - 启动AI项目集合
+2026-03-22 02:55:35,255 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 02:56:03,200 - ai_project - INFO - LLM调用成功
+2026-03-22 02:56:05,350 - ai_project - INFO - 邮件已成功发送至：2093782305@qq.com
+2026-03-22 02:57:03,784 - ai_project - INFO - LLM调用成功
+2026-03-22 02:57:04,145 - ai_project - INFO - 邮件已成功发送至：2093782305@qq.com
+2026-03-22 15:31:59,440 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 15:32:08,950 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 15:32:09,203 - ai_project - INFO - 数据加载完成，共4行
+2026-03-22 15:32:09,210 - ai_project - INFO - 统计完成：{'总销售额': np.int64(67000), '平均销售额': np.float64(16750.0), '最高订单': np.int64(22000), '订单总数': 4, '城市数': 4}
+2026-03-22 15:32:11,462 - ai_project - INFO - LLM调用成功
+2026-03-22 15:32:11,484 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603221532.docx
+2026-03-22 15:32:19,888 - ai_project - INFO - 邮件发送成功
+2026-03-22 15:32:19,888 - ai_project - INFO - ===自动化报告任务全部完成===
+2026-03-22 17:27:12,715 - ai_project - INFO - AI_Auto_Report_System 启动成功
+2026-03-22 17:27:12,716 - ai_project - INFO - 定时任务已启动，每天17:30自动执行
+2026-03-22 17:27:12,716 - ai_project - INFO - 进入等待模式
+2026-03-22 17:30:12,744 - ai_project - INFO - 定时任务触发
+2026-03-22 17:30:12,744 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 17:30:32,868 - ai_project - INFO - 已选择模型：qwen
+2026-03-22 17:30:33,017 - ai_project - INFO - 数据加载完成，共4行
+2026-03-22 17:30:33,018 - ai_project - INFO - 统计完成：{'总销售额': np.int64(67000), '平均销售额': np.float64(16750.0), '最高订单': np.int64(22000), '订单总数': 4, '城市数': 4}
+2026-03-22 17:30:34,931 - ai_project - INFO - LLM调用成功
+2026-03-22 17:30:34,952 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603221730.docx
+2026-03-22 17:30:36,874 - ai_project - INFO - 邮件发送成功
+2026-03-22 17:30:36,875 - ai_project - INFO - ===自动化报告任务全部完成===
+2026-03-22 17:30:36,875 - ai_project - INFO - 每日自动化报告执行完成
+2026-03-22 17:59:55,166 - ai_project - INFO - AI_Auto_Report_System 启动成功
+2026-03-22 17:59:55,167 - ai_project - INFO - 定时任务已启动，每天17:40自动执行
+2026-03-22 17:59:55,167 - ai_project - INFO - 进入等待模式
+2026-03-22 18:00:02,147 - ai_project - INFO - 收到中断信号，正在停止服务
+2026-03-22 18:00:58,237 - ai_project - INFO - AI_Auto_Report_System 启动成功
+2026-03-22 18:00:58,237 - ai_project - INFO - 定时任务已启动，每天18:02自动执行
+2026-03-22 18:00:58,237 - ai_project - INFO - 进入等待模式
+2026-03-22 18:02:58,250 - ai_project - INFO - 定时任务触发
+2026-03-22 18:02:58,250 - ai_project - INFO - ===开始执行自动化报告任务===
+2026-03-22 18:02:58,414 - ai_project - INFO - 数据加载完成，共4行
+2026-03-22 18:02:58,414 - ai_project - INFO - 统计完成：{'总销售额': np.int64(67000), '平均销售额': np.float64(16750.0), '最高订单': np.int64(22000), '订单总数': 4, '城市数': 4}
+2026-03-22 18:03:09,170 - ai_project - INFO - LLM调用成功
+2026-03-22 18:03:09,192 - ai_project - INFO - 报告已生成：projects/auto_report/output/报告_202603221803.docx
+2026-03-22 18:03:09,645 - ai_project - INFO - 邮件发送成功
+2026-03-22 18:03:09,645 - ai_project - INFO - ===自动化报告任务全部完成===
+2026-03-22 18:03:09,645 - ai_project - INFO - 每日自动化报告执行完成

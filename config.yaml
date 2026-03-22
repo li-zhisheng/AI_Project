@@ -1,0 +1,18 @@
+# 基础配置
+app_name: "AI_Auto_Report_System"
+version: "1.0.0"
+
+# 定时任务（每天09:00自动运行）
+schedule:
+  enable: true
+  run_time: "09:00"
+
+# 邮件通知
+email:
+  enable: true
+  to_email: 2093782305@qq.com
+
+# 日志
+log:
+  level: "INFO"
+  path: "./logs/"
