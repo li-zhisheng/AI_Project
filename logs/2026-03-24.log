@@ -1,0 +1,9 @@
+2026-03-24 17:12:57,375 - ai_project - INFO - 启动AI项目集合
+2026-03-24 17:13:00,298 - ai_project - INFO - 这是一个基于Streamlit的可视化工具，请使用streamlit run projects/dashboard/dashboard.py命令运行
+2026-03-24 17:13:21,139 - ai_project - INFO - 退出程序
+2026-03-24 17:18:05,686 - ai_project - INFO - 启动AI项目集合
+2026-03-24 17:20:58,517 - ai_project - INFO - 启动AI项目集合
+2026-03-24 17:23:21,127 - ai_project - INFO - 启动AI项目集合
+2026-03-24 17:23:27,201 - ai_project - INFO - LLM调用成功
+2026-03-24 17:23:27,228 - ai_project - INFO - 报告已生成：AI日报.docx
+2026-03-24 17:23:27,721 - ai_project - INFO - 邮件发送成功

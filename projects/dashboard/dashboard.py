@@ -171,7 +171,6 @@ if uploaded_file:
                         top_10 = pie_data.head(10)
                         other_sum = pie_data[10:][num_cols[0]].sum()
                         if other_sum > 0:
-                            # 修复：去掉多余的 }
                             other_row = pd.DataFrame({cat_cols[0]: ["其他"], num_cols[0]: [other_sum]})
                             pie_data = pd.concat([top_10, other_row])
                     
